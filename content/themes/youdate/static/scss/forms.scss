@@ -1,0 +1,16 @@
+.selectize-control {
+  height: 38px;
+}
+
+select {
+  display: none;
+}
+.selectize-control select {
+  display: block;
+}
+
+.has-error .help-block {
+  color: #cd201f;
+  font-size: 0.9rem;
+  padding-top: 3px;
+}

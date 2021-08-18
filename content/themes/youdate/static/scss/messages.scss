@@ -1,0 +1,230 @@
+@import "mixins";
+@import "variables";
+
+.body-messages {
+  display: flex;
+  .page {
+    width: 100%;
+  }
+  @include media-breakpoint-down(sm) {
+    .page-fill {
+      .content {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        .container {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .card {
+          border: 0;
+        }
+        .items {
+          padding-left: 0.75rem !important;
+          padding-right: 0.75rem !important;
+        }
+      }
+    }
+    .footer {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+  }
+}
+
+.col-messages-conversations {
+  border-right: 1px solid rgba(0, 40, 100, 0.12);
+  overflow: hidden;
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+    border-right: 0;
+    &.active {
+      display: flex !important;
+    }
+  }
+}
+
+.col-messages-conversation {
+  @include media-breakpoint-down(sm) {
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+.messages-conversations {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  .wrapper-conversations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  .conversations {
+    .conversation {
+      &.premium {
+        background: #fff5ec;
+        .avatar {
+          border: 2px solid #ff6600;
+          box-shadow: 0 0 3px #ff6600;
+        }
+      }
+      .avatar {
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+        flex: 0 0 auto;
+      }
+      .message {
+        color: #444;
+      }
+      &.active {
+        background: #467fcf;
+        .name {
+          color: #fff;
+        }
+        .message {
+          color: #dfdfdf;
+        }
+      }
+    }
+  }
+}
+
+.messages-conversation {
+  position: relative;
+  height: 100%;
+  .conversation-header {
+    border-bottom: 1px solid rgba(0, 40, 100, 0.12);
+    height: 73px;
+    .avatar {
+      width: 48px;
+      height: 48px;
+    }
+    .verified {
+      background: $blue;
+      font-size: 11pt;
+      width: 1.2rem;
+      height: 1.2rem;
+      min-width: 1.2rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      margin-left: 0.4rem;
+      text-align: center;
+      i.fe {
+        color: $white;
+      }
+    }
+  }
+  .conversation-items {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    .wrapper-items {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      overflow-y: auto;
+      position: absolute;
+    }
+    .date {
+      text-align: center;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      span {
+        padding: 3px 7px;
+        color: #777;
+        border: 1px solid #ddd;
+        font-size: 9pt;
+        text-transform: uppercase;
+        border-radius: 4px;
+      }
+    }
+    .item {
+      margin-bottom: 1.5rem;
+      padding: 3px;
+      cursor: pointer;
+      border-radius: 4px;
+      @include clearfix;
+      .avatar {
+        margin-left: 0;
+        margin-right: 0.5rem;
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        flex: 0 0 auto;
+        background-size: 32px 32px;
+      }
+      .time {
+        margin-left: 0.5rem;
+        margin-right: 0;
+      }
+      .spinner {
+        margin-left: 0.5rem;
+        margin-right: 0;
+        color: #888;
+      }
+      .flex-row-reverse {
+        .avatar {
+          margin-left: 0.5rem;
+          margin-right: 0;
+        }
+        .time {
+          margin-left: 0;
+          margin-right: 0.5rem;
+        }
+        .spinner {
+          margin-left: 0;
+          margin-right: 0.5rem;
+        }
+      }
+      .text {
+        max-width: 30rem;
+      }
+      &.sent .item-body {
+        float: right;
+      }
+      &.inbox .item-body {
+        float: left;
+      }
+      &.new {
+        .text {
+          font-weight: bolder;
+        }
+      }
+      &.selected {
+        background: #edf2fa;
+      }
+    }
+  }
+  .conversation-input {
+    height: 64px;
+    background: #fff;
+    border-top: 1px solid rgba(0, 40, 100, 0.12);
+    .emoji-items {
+      overflow-y: scroll;
+      max-height: 200px;
+      height: 200px;
+      .emoji-item {
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 4px;
+        margin: 2px;
+        width: 1.8rem;
+        height: 1.8rem;
+        text-align: center;
+        user-select: none;
+        &:hover {
+          background: $gray-300;
+        }
+      }
+    }
+  }
+}

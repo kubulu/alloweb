@@ -1,0 +1,54 @@
+.empty-state {
+  @extend .my-2, .d-flex, .justify-content-center, .flex-column;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  .empty-icon {
+    @extend .mb-4;
+    i.fe {
+      color: $gray-300;
+      font-size: 48pt;
+    }
+  }
+  .empty-title {
+    font-size: 16pt;
+  }
+  .empty-subtitle {
+    @extend .text-muted;
+    font-size: 12pt;
+  }
+  .empty-action {
+    @extend .mt-2;
+  }
+}
+
+.sidebar-menu-line {
+  height: 1px;
+  background: $gray-200;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.page-fill-wrapper {
+  min-height: 500px;
+}
+
+.min-h-100 {
+  min-height: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+.no-padding {
+  padding: 0;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-bolder {
+  font-weight: 600;
+}
+.text-small {
+  font-size: 0.8rem;
+}

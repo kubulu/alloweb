@@ -1,0 +1,21 @@
+.dropdown-notifications {
+  .dropdown-menu {
+    min-width: 20rem;
+    .dropdown-item a {
+      color: $body-color;
+    }
+  }
+}
+
+.notifications-list {
+  a {
+    color: $body-color;
+  }
+  .notification-item {
+    padding: 0.25rem 0.5rem;
+    &.new {
+      background: lighten($azure, 37%);
+      border-radius: 4px;
+    }
+  }
+}

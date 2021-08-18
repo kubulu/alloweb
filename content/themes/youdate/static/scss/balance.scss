@@ -1,0 +1,125 @@
+@import "variables";
+
+.transactions-grid-view {
+  .col-transaction-type {
+    max-width: 64px;
+  }
+  .transaction-add {
+    color: #5eba00;
+  }
+  .transaction-remove {
+    color: #cd201f;
+  }
+  .transaction-type {
+    width: 32px;
+    height: 32px;
+    background: rgba(155, 155, 155, .7);
+    display: inline-block;
+    color: rgba(44, 44, 44, .7);
+    text-align: center;
+    line-height: 32px;
+    font-size: 18px;
+    border-radius: 32px;
+    .fa {
+      color: #fff;
+    }
+  }
+}
+
+.payment-amount-variant {
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  &:hover {
+    background: #467fcf;
+    color: #fff;
+    .custom-control-label {
+      background: #467fcf;
+      color: #fff;
+    }
+  }
+  .custom-control-label {
+    padding-left: 1rem;
+    &:after, &:before {
+      top: 50%;
+      margin-top: -0.5rem;
+      left: 1rem;
+    }
+  }
+  .credits-count {
+    display: inline-block;
+    font-size: 12pt;
+    font-weight: bolder;
+    padding-left: 1rem;
+    &:before, &:after {
+      left: 0;
+    }
+  }
+  .credits-amount {
+    display: inline-block;
+    font-weight: lighter;
+    font-size: 12pt;
+  }
+}
+
+.feature {
+  font-size: 1rem;
+  .feature-icon {
+    width: 3em;
+    height: 3rem;
+    min-width: 3rem;
+    min-height: 3rem;
+    text-align: center;
+    border-radius: 4px;
+    i {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+  .feature-title {
+    font-size: 1.1rem;
+    .feature-price {
+      font-size: 0.9rem;
+      color: #999;
+    }
+  }
+}
+
+.premium-about {
+  .premium-about-item {
+    .premium-icon {
+      width: 2.5em;
+      height: 2.5rem;
+      min-width: 2.5rem;
+      min-height: 2.5rem;
+      margin-right: 1.2rem;
+      text-align: center;
+      border-radius: 4px;
+      i {
+        color: #fff;
+        font-size: 1.25rem;
+      }
+      &.premium-icon-search {
+        background: #45aaf2;
+      }
+      &.premium-icon-ads {
+        background: #2bcbba;
+      }
+      &.premium-icon-messaging {
+        background: #fd9644;
+      }
+      &.premium-icon-incognito {
+        background: #6b7278;
+      }
+    }
+    .premium-description {
+      .title {
+        font-size: 1.1rem;
+      }
+      .description {
+        color: #888;
+      }
+    }
+  }
+}

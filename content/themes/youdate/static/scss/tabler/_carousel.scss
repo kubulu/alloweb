@@ -1,0 +1,19 @@
+.carousel-item-background {
+  content: '';
+  background: rgba(0, 0, 0, .5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  border: 2px solid rgba(255,255,255,.5);
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  padding: 20px;
+  background-size: 15px;
+}

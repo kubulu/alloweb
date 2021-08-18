@@ -1,0 +1,130 @@
+.spotlight-items-horizontal {
+
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  @include clearfix();
+  @include media-breakpoint-down(sm) {
+    overflow-x: inherit;
+  }
+
+  .spotlight-item {
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    color: $gray-800;
+    max-width: 7.5rem;
+    padding: 0.25rem 0.5rem;
+
+    .avatar {
+      margin-bottom: 0.7rem;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 6rem;
+      line-height: 1rem;
+      font-size: 1rem;
+    }
+
+    .name {
+      line-height: 1.2rem;
+    }
+
+    &.spotlight-item-submit {
+      .avatar {
+        .icon {
+          background: $azure;
+          width: 1.75rem;
+          height: 1.75rem;
+          border-radius: 1.75rem;
+          margin-bottom: 0.2rem;
+          z-index: 2;
+          .fa {
+            color: $white;
+            margin-top: 0.3rem;
+          }
+        }
+        .label {
+          color: $white;
+          z-index: 2;
+        }
+      }
+      .avatar:before {
+        display: block;
+        content: '';
+        width: 6rem;
+        height: 6rem;
+        border-radius: 6rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .55);
+        z-index: 1;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+      float: left;
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
+      max-height: 75px;
+      .avatar {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 4rem;
+      }
+      &.spotlight-item-submit {
+        .avatar:before {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 4rem;
+        }
+      }
+    }
+  }
+}
+
+.modal-spotlight-submit {
+  .form-group-picker {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+  .photo-picker {
+    display: flex;
+    max-height: 420px;
+    overflow-y: auto;
+    .photo-item {
+      flex-grow: 1;
+      position: relative;
+      min-height: 120px;
+    }
+    .photo-input {
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+    .photo-input:checked + .photo {
+      border: 4px solid $primary;
+      z-index: 1;
+      color: $primary;
+    }
+    .photo-input:focus + .photo {
+      border: 4px solid $primary;
+      z-index: 2;
+    }
+    .photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+      position: relative;
+      user-select: none;
+      background-size: cover;
+    }
+  }
+}

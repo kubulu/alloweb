@@ -1,0 +1,8 @@
+{
+  "title": "MyDate",
+  "author": "Alexander Kononenko",
+  "website": "https://youdate.hauntd.me/",
+  "version": "1.0",
+  "namespace": "mydate",
+  "extends": "youdate"
+}

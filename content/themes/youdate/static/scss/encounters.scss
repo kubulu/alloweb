@@ -1,0 +1,163 @@
+.body-encounters {
+  display: flex;
+  min-height: 100%;
+  height: auto;
+  &.ie {
+    height: inherit;
+  }
+  .page {
+    width: 100%;
+    min-height: 640px;
+    .content {
+    }
+  }
+}
+.encounters {
+  .card {
+    margin-bottom: 0;
+    @include media-breakpoint-up(md) {
+      max-height: 640px;
+    }
+  }
+  .encounters-photo {
+    position: relative;
+    .carousel {
+      @include media-breakpoint-down(sm) {
+        min-height: 480px;
+      }
+      @include media-breakpoint-up(sm) {
+        height: 100% !important;
+      }
+    }
+    .carousel-inner {
+      height: 100%;
+    }
+    .carousel-photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-position: center center;
+      background-size: cover;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      @include media-breakpoint-up(md) {
+        border-bottom-left-radius: $border-radius;
+        border-top-right-radius: 0;
+      }
+    }
+    .encounter-photo-item {
+      position: relative;
+      min-height: 480px;
+    }
+    .encounters-controls {
+      position: absolute;
+      bottom: 1rem;
+      width: 100%;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      text-align: center;
+      user-select: none;
+      .btn {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 4rem;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        transition: transform 0.1s ease-in;
+        &:hover {
+          transform: scale(1.3);
+        }
+        &:focus, &:active {
+          box-shadow: none;
+        }
+        i.fa {
+          font-size: 2rem;
+        }
+        &.btn-like i.fa {
+          margin-top: 0.3rem;
+          color: $red;
+        }
+        &.btn-skip i.fa {
+          margin-top: 0;
+          color: $gray-500;
+        }
+        &.btn-like:active {
+          background: $red;
+          i.fa {
+            color: $white;
+          }
+        }
+        &.btn-skip:active {
+          background: $blue;
+          i.fa {
+            color: $white;
+          }
+        }
+      }
+    }
+    .carousel-indicators {
+      li {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 0.5rem;
+      }
+    }
+    .encounter-photo-item {
+      cursor: pointer;
+    }
+    @include media-breakpoint-up(md) {
+      width: 60%;
+    }
+  }
+  .encounters-info {
+    border-left: 0;
+    overflow-y: auto;
+    .profile-main-info {
+      .first-line h3 {
+        margin-bottom: 0;
+      }
+    }
+    @include media-breakpoint-up(md) {
+      border-left: 1px solid $border-color;
+      width: 40%;
+    }
+  }
+  .encounters-queue {
+    width: 6rem;
+    overflow: hidden;
+    padding: 0.4rem 1rem;
+    position: relative;
+    .queue-item {
+      margin-bottom: 0.5rem;
+      background: $gray-300;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 3rem;
+      &.active {
+        img {
+          border: 2px solid $body-bg;
+          box-shadow: 0 0 0 2px $blue;
+        }
+      }
+      img {
+        display: block;
+        background: $gray-300;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 3rem;
+      }
+    }
+  }
+}
+
+.encounter-modal-body {
+  .encounters-mutual {
+    .heart i {
+      font-size: 20pt;
+      color: $red;
+    }
+  }
+}
+

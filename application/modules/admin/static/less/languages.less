@@ -1,0 +1,43 @@
+@import "variables";
+
+.progress.progress-stats {
+  background: #b8c4d0;
+  span {
+    text-align: center;
+  }
+}
+
+.language-inactive {
+  opacity: 0.7;
+  &:hover {
+    opacity: 1.0;
+  }
+}
+
+.language-actions {
+  padding: 6px;
+  text-align: right;
+}
+
+#alert-tooltip {
+  width:100px;
+  height:100px;
+  padding:25px;
+  position:fixed;
+  top:48%;
+  left:48%;
+  border-radius:10px;
+  font-size:50px;
+}
+
+#alert-tooltip.red {
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  color: #a94442;
+}
+
+#alert-tooltip.green {
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  color: #3c763d;
+}

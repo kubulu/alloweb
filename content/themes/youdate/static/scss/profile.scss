@@ -1,0 +1,179 @@
+@import "mixins";
+
+.profile-photos {
+  .profile-main-photo {
+    position: relative;
+    padding: $profile-card-body-padding;
+    .photo-wrapper {
+      width: 100%;
+      padding-top: 100%;
+      background: #ecf7fe;
+      position: relative;
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -1.25rem;
+        margin-left: -1.25rem;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-height: auto !important;
+        border-radius: $border-radius;
+      }
+    }
+  }
+  .profile-other-photos {
+    padding: $profile-card-body-padding;
+    .gallery-item {
+      position: relative;
+      display: block;
+      img {
+        border-radius: $border-radius;
+      }
+      div.hidden-photos {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: $border-radius;
+        background: rgba(0, 0, 0, .4);
+        span {
+          border-radius: $border-radius;
+          color: $gray-200;
+          text-align: center;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.profile-info {
+  .profile-info-block {
+    padding: $profile-card-body-padding;
+    border-bottom: 1px solid $profile-card-border-color;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.profile-main-info {
+  .first-line {
+    margin-bottom: 0.5rem;
+    h1, .age {
+      display: inline-block;
+      font-size: 17pt;
+      margin-bottom: 0;
+    }
+    h1 {
+      font-weight: bold;
+    }
+  }
+  .second-line {
+    .user-badge {
+      width: $profile-badge-size;
+      height: $profile-badge-size;
+      border-radius: $profile-badge-size;
+      font-size: 12pt;
+      text-decoration: none;
+    }
+    .user-sex-badge {
+      background: $gray-300;
+      color: $gray-600;
+      &.sex-male {
+        background: $blue;
+        color: $white;
+      }
+      &.sex-female {
+        background: $pink;
+        color: $white;
+      }
+    }
+    .user-verified-badge {
+      background: $green;
+      i.fe {
+        color: $white;
+      }
+    }
+    .user-premium-badge {
+      background: orange;
+      font-size: 12pt;
+      i.fe {
+        color: $white;
+      }
+    }
+    .user-location {
+      line-height: $profile-badge-size;
+      font-size: 13pt;
+      color: $text-muted;
+    }
+  }
+  .like-toggle {
+    padding-left: 1rem;
+    margin-left: 1rem;
+    border-left: 1px solid $profile-card-border-color;
+    .btn-like-toggle {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 2.75rem;
+      display: block;
+      i {
+        margin-left: -3px;
+        display: inline;
+      }
+      &.btn-not-liked {
+        background: $gray-200;
+        i {
+          color: $gray-600;
+        }
+      }
+      &.btn-liked {
+        background: $red;
+        color: $white;
+      }
+    }
+  }
+}
+
+.profile-navigation {
+  .navigation-item {
+    margin-bottom: 0.5rem;
+    &.active a, &:hover a {
+      background: $white;
+      border-color: $gray-200;
+    }
+    &.active a {
+      color: $gray-700;
+    }
+    a {
+      display: block;
+      border: 1px solid transparent;
+      border-radius: $border-radius;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: $gray-600;
+    }
+  }
+}
+
+.user-popularity {
+
+}
+
+.online-status {
+  display: inline-block;
+  margin-left: 0.5rem;
+  width: .75rem;
+  height: .75rem;
+  border: 2px solid #fff;
+  background: rgba(90, 90, 90, .7);
+  border-radius: 50%;
+}

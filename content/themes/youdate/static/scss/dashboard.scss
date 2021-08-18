@@ -1,0 +1,28 @@
+.dashboard-block {
+  > h3 {
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  &.dashboard-block-encounters {
+    .encounters-wrapper {
+      overflow: hidden;
+    }
+    .card, .encounter-photo-item {
+      height: 480px;
+      max-height: 480px;
+    }
+    @include media-breakpoint-down(sm) {
+      .card, .encounter-photo-item {
+        height: 480px;
+        max-height: 480px;
+      }
+    }
+  }
+  &.dashboard-block-online {
+    .card {
+      @include media-breakpoint-up(md) {
+        height: 420px;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.landing-page-bg {
+  background: url('../images/landing.jpg') 0 100% no-repeat;
+  background-size: cover;
+  min-height: 200px;
+  @include media-breakpoint-up(md) {
+    min-height: 400px;
+  }
+  @include media-breakpoint-up(lg) {
+    min-height: 500px;
+  }
+}
+
+.landing-page-head {
+  padding: 15px;
+  h1 {
+    color: #e1456b;
+    font-size: 22pt;
+    margin-bottom: 10px;
+    font-weight: bolder;
+  }
+  .subtitle {
+    color: #333;
+    font-size: 14pt;
+  }
+}
+.landing-or {
+  color: #ababab;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 0.9rem;
+}
+
+.social-auth-lp {
+  .auth-clients li {
+    float: none;
+    display: inline-block;
+    margin: 0 6px;
+  }
+}

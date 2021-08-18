@@ -1,0 +1,8 @@
+# composer vendor dir
+/vendor
+
+# composer itself is not needed
+composer.phar
+
+# messages and langues (not important)
+/messages-source

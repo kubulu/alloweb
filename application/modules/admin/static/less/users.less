@@ -1,0 +1,29 @@
+@import "mixins";
+@import "variables";
+
+.user-header {
+  padding: 10px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #eee;
+  .user-image {
+    float: left;
+    margin-right: 10px;
+  }
+  .user-image img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    .rounded(64px);
+  }
+  .user-info {
+    margin: 9px 10px;
+  }
+  .user-name {
+    font-size: 14pt;
+  }
+  .user-username {
+    color: #898989;
+    font-size: 10pt;
+    font-weight: bolder;
+  }
+}

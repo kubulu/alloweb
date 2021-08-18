@@ -1,0 +1,7 @@
+.header:first-child {
+    background: #fff7ff;
+}
+.nav-tabs .nav-link.active {
+    color: deeppink;
+    border-color: deeppink;
+}
